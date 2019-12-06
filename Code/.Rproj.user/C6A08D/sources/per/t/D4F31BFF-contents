@@ -1,0 +1,20 @@
+---
+title: "R Final"
+author: "Andrew Pichette"
+date: "11/29/2019"
+output: pdf_document
+---
+
+```{r}
+#load all packages
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(lubridate)
+
+
+```
+
+```{r}
+#read csv in and assign variables
+afghan_data <- read.csv("/data/afghanistan_table")

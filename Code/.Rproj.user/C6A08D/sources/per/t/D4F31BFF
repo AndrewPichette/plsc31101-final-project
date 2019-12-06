@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1575061222351.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2125093977",
+    "id" : "D4F31BFF",
+    "lastKnownWriteTime" : 1575061451,
+    "last_content_update" : 1575061451767,
+    "path" : "C:/Users/Andrew/Desktop/R Final Project/R Final Project/R Final.Rmd",
+    "project_path" : "R Final.Rmd",
+    "properties" : {
+        "cursorPosition" : "19,50",
+        "scrollLine" : "3"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

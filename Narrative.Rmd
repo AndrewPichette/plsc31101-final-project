@@ -1,0 +1,39 @@
+---
+title: "Narrative"
+author: "Andrew Pichette"
+date: "12/6/2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## Dependencies
+This project uses:
+1. readxl
+2. tidyverse
+3. dplyr
+4. ggplot2
+5. lubridate
+6. stargazer
+
+
+## Brief substantive background / goal:
+For the project, I've opted to do some data analysis on two databases. The first is the Bureau of Investigative Journalism's Drone Strike database which collects information on the use of armed drones, with my focus on Afghanistan. The second is the Global Terrorism Database, which collects information about terrorist activity around the world. With these datasets, I went looking for what relationship exists between the number of strikes and the number of terrorist attacks.
+
+## Collecting data
+As mentioned above, I utilized two datasets which can be located at:
+Bureau of Investigative Journalism: https://www.thebureauinvestigates.com/projects/drone-war
+
+Global Terrorism Database: https://www.start.umd.edu/gtd/ 
+
+## Cleaning / pre-processing data
+While I originally intended to approach at as local a level as possible, ideally down to villages and cities, the way data is coded in both datasets does not permit such an approach. Once I had filtered for only incidents involving Afghanistan in both datasets, limited to the years 2015-2018 as covered in the BIJ data, it became clear the only way to preserve a number of observations greater than about 20 was to operate at the province level. Any other combination at the "location"-year level was especially troubled by the fact that most of those observations were scattered across all four observed years and with too many locations to make a meaningful analysis out of. 
+
+As such, I eventually settled on the province-year level data, which, while not as targeted as I had initially hoped, was able to provide the most useable data.
+
+## Analysis and visualization
+With my data cleaned and compiled into a dataframe, "final_data" I went about visualizing the data as a scatterplot relating the number of terrorist incidents to the number of drone strikes per province-year and a 3-model regression. As noted in the comments of my code, this process went through three stages. The first had an outlier problem in two observations, so a new "final_data_no_outliers" dataframe was created to mitigate their impact. The third version, at Pete's recommendation, declutters the visualization by removing some of the data with low values in both variables to make a more readable graph. 
+
+## Future work
+Going forward, I would like to examine additional variables like the number of US Soldiers in the province, the urban/rural population ratio, and whether or not a strike is considered a covert operation. I would probably also consider modeling on province-month rather than province-year and running another set of regressions with a time lag.
